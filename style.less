@@ -1,0 +1,147 @@
+.simpleList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.bordered(@color: gray) {
+  border: solid 3px @color;
+  box-sizing: border-box;
+}
+
+.displayFlex(@direction: row, @justify: flex-start, @align: flex-start) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justify;
+  align-items: @align;
+}
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  .displayFlex(column, stretch, stretch);
+  background-color: #E2E1DE;
+}
+
+.header{
+  .displayFlex(row);
+  flex-wrap: wrap;
+
+  .bordered(red);
+
+  min-height: 50px;
+  // height: 100%;
+}
+
+.main {
+  .displayFlex(row, stretch, stretch);
+  max-height: calc(100vh - 50px - 100px);
+  margin: 0;
+  padding: 0;
+  // box-sizing: border-box;
+}
+
+.footer {
+  .displayFlex(row);
+  min-height: 100px;
+  // height: 100%;
+  margin: 0;
+
+  .bordered(green);
+}
+
+.users {
+  width: 200px;
+  overflow-y: auto;
+  margin: 0;
+
+  .bordered(orange);
+  .displayFlex(column, flex-start, stretch);
+  flex: none;
+}
+
+.users__list {
+  .simpleList();  
+  .displayFlex(column, flex-start, stretch);
+}
+
+.user {
+  .displayFlex(row, stretch, center);
+  // .bordered(blue);
+}
+
+.user__foto {
+  padding: 3px;
+}
+
+.user__name {
+
+}
+
+.messages {
+  .displayFlex(column);
+  width: 100%;
+  overflow-y: auto;
+  // overflow-x: hidden;
+  // margin-left: 10px;
+
+  .bordered(purple);
+}
+
+.messages__list {
+  .simpleList(); 
+  .displayFlex(column);
+  width: 100%;
+}
+
+.message {
+  .displayFlex(row);
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 5px auto;
+  padding: 3px;
+  color: black;
+}
+
+// .message_in {
+//   justify-content: flex-end;
+// }
+
+// .message_out {
+//   justify-content: flex-start;
+// }
+
+.message-content {
+  border-radius: 15px;
+  padding: 3px 8px;
+}
+
+.message_out .message-content {
+  background-color: #B9FFF3;
+}
+
+.message_in .message-content {
+  background-color: rgb(255, 240, 255);
+}
+
+.message-paragraph {
+  margin: 3px 0;
+  padding: 0;
+}
+
+.message-link {
+
+}
+
+.new-message {
+  width: 100%;
+  min-height: 5em;
+  padding: 5px;
+  box-sizing: border-box;
+}

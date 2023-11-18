@@ -1,0 +1,129 @@
+.simpleList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: stretch;
+  align-items: stretch;
+  background-color: #E2E1DE;
+}
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  border: solid 3px red;
+  box-sizing: border-box;
+  min-height: 50px;
+}
+.main {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: stretch;
+  max-height: calc(100vh - 50px - 100px);
+  margin: 0;
+  padding: 0;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  min-height: 100px;
+  margin: 0;
+  border: solid 3px green;
+  box-sizing: border-box;
+}
+.users {
+  width: 200px;
+  overflow-y: auto;
+  margin: 0;
+  border: solid 3px orange;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  flex: none;
+}
+.users__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: stretch;
+  align-items: center;
+}
+.user__foto {
+  padding: 3px;
+}
+.messages {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  overflow-y: auto;
+  border: solid 3px purple;
+  box-sizing: border-box;
+}
+.messages__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+}
+.message {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  margin: 5px auto;
+  padding: 3px;
+  color: black;
+}
+.message-content {
+  border-radius: 15px;
+  padding: 3px 8px;
+}
+.message_out .message-content {
+  background-color: #B9FFF3;
+}
+.message_in .message-content {
+  background-color: #fff0ff;
+}
+.message-paragraph {
+  margin: 3px 0;
+  padding: 0;
+}
+.new-message {
+  width: 100%;
+  min-height: 5em;
+  padding: 5px;
+  box-sizing: border-box;
+}
