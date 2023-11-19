@@ -5,7 +5,6 @@
 }
 body,
 html {
-  height: 100%;
   margin: 0;
   padding: 0;
 }
@@ -15,6 +14,7 @@ body {
   justify-content: stretch;
   align-items: stretch;
   background-color: #E2E1DE;
+  height: 100vh;
 }
 .header {
   display: flex;
@@ -25,6 +25,7 @@ body {
   border: solid 3px red;
   box-sizing: border-box;
   min-height: 50px;
+  flex-shrink: 0;
 }
 .main {
   display: flex;
@@ -34,21 +35,22 @@ body {
   max-height: calc(100vh - 50px - 100px);
   margin: 0;
   padding: 0;
+  flex-grow: 1;
+  overflow-y: auto;
 }
 .footer {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  min-height: 100px;
-  margin: 0;
   border: solid 3px green;
   box-sizing: border-box;
+  min-height: 100px;
+  flex-shrink: 0;
 }
 .users {
   width: 200px;
   overflow-y: auto;
-  margin: 0;
   border: solid 3px orange;
   box-sizing: border-box;
   display: flex;
@@ -75,15 +77,19 @@ body {
 .user__foto {
   padding: 3px;
 }
+.user__name {
+  padding: 3px;
+  margin: 0;
+}
 .messages {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  width: 100%;
-  overflow-y: auto;
   border: solid 3px purple;
   box-sizing: border-box;
+  width: 100%;
+  overflow-y: auto;
 }
 .messages__list {
   list-style: none;
@@ -123,7 +129,7 @@ body {
 }
 .new-message {
   width: 100%;
-  min-height: 5em;
+  min-height: 3em;
   padding: 5px;
   box-sizing: border-box;
 }
