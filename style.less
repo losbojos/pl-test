@@ -34,8 +34,8 @@ body {
 
   .bordered(red);
 
-  min-height: 50px;
-  flex-shrink: 0;
+  min-height: 50px; // минимальная высота
+  flex-shrink: 0; // запрещаем сжиматься по высоте чтобы расшириться на весь контент
 }
 
 .main {
@@ -44,21 +44,21 @@ body {
   margin: 0;
   padding: 0;
 
-  flex-grow: 1;
-  overflow-y: auto;
+  // Это поможет убрать общий вертикальный скролл, оставив у панелей пользователей и сообщений
+  overflow-y: auto; // Но реально скролла у main не будет по факту, т.к. есть уже у панелей вложенных
 }
 
 .footer {
   .displayFlex(row);
   .bordered(green);
 
-  min-height: 100px;
-  flex-shrink: 0;  
+  min-height: 100px; // минимальная высота
+  flex-shrink: 0; // запрещаем сжиматься по высоте чтобы расшириться на весь контент
 }
 
 .users {
   width: 200px;
-  overflow-y: auto;
+  overflow-y: auto; // Вертикальный скролл для списка пользователей
 
   .bordered(orange);
   .displayFlex(column, flex-start, stretch);
